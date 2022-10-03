@@ -12,7 +12,7 @@
 
 - 변수 선택을 위한 유전 알고리즘 절차
 
-![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/Genetic%20Algorithm/images/Untitled1.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/Genetic%20Algorithm/images/Untitled%201.png)
 
 ## ****Step1: 염색체 초기화 및 하이퍼파라미터 설정(initialization)****
 
