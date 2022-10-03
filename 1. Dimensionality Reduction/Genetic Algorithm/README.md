@@ -18,14 +18,14 @@
 
 먼저 유전알고리즘에 대한 기본적인 용어를 살펴보자
 
-![Untitled2](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/Genetic%20Algorithm/images/Untitled2.png)
+![Untitled]https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/Genetic%20Algorithm/images/Untitled%202.png)
 
 - 해집단(population) : 가능한 염색체들의 조합으로 이루어지며, 정해진 수의 염색체 집단을 의미한다.
 - 염색체(chromosome) : 한 세대 혹은 해집단에서 가능한 하나의 유전적 표현을 의미한다. 염색체는 유전자들의 집합이다.
 - 유전자(gene) : 유전자는 염색체의 구성요소이다. 유전 알고리즘에서의 최소 단위이며 0과 1로 인코딩된다.
 - 적합도(fitness) : 염색체의 우열을 가릴 수 있는 정량적 지표이다. 적합도는 두 염색체가 동일한 예측 성능을 나타낼 경우에는 적은 수의 변수를 사용한 염색체를 선호해야 하고, 두 염색체가 동일한 변수를 사용했을 경우에는 우수한 예측 성능을 나타내는 염색체를 선호해야 한다. 선형회귀분석에서는 adjusted R-square, AIC, BIC 등이 사용될 수 있고, 분류 문제에서는 정확도 등을 사용할 수 있다.
 
-![Untitled3](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/Genetic%20Algorithm/images/Untitled3.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/Genetic%20Algorithm/images/Untitled%203.png)
 
 먼저 하이퍼파라미터를 설정한 후 random하게 chromosome을 초기화해주어야 한다.
 
@@ -108,7 +108,7 @@ step5는 crossover와 mutation을 활용해 다음 세대 염색체를 생성하
     - one point cross over는 한 지점에서만 유전자를 교배하고
     - multi point cross over는 여러 지점에서 유전자를 교배한다.
 
-![Untitled4](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/Genetic%20Algorithm/images/Untitled4.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/Genetic%20Algorithm/images/Untitled%204.png)
 
 다음 코드에서는 one point cross over를 사용하였다.
 
@@ -132,7 +132,7 @@ def crossover(pop_after_sel):
     - 특정 유전자의 정보를 낮은 확률로 반대값으로 변환하다.
     - 현재 해가 local optima에서 탈출할 수 있는 기회를 제공한다.
 
-![Untitled5](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/Genetic%20Algorithm/images/Untitled5.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/Genetic%20Algorithm/images/Untitled%205.png)
 
 - mutation_rate : 돌연변이의 비율
 
