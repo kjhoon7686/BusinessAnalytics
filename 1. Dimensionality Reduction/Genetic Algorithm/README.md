@@ -18,7 +18,7 @@
 
 먼저 유전알고리즘에 대한 기본적인 용어를 살펴보자
 
-![Untitled]https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/Genetic%20Algorithm/images/Untitled%202.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/Genetic%20Algorithm/images/Untitled%202.png)
 
 - 해집단(population) : 가능한 염색체들의 조합으로 이루어지며, 정해진 수의 염색체 집단을 의미한다.
 - 염색체(chromosome) : 한 세대 혹은 해집단에서 가능한 하나의 유전적 표현을 의미한다. 염색체는 유전자들의 집합이다.
