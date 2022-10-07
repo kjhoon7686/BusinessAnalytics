@@ -12,7 +12,7 @@
 
 - distance의 성질
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/88c3a814-8804-4983-9555-02cdd0d4dbd6/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/MDS/images/Untitled%201.png)
 
 mds의 과정은 간단하다.
 
@@ -43,13 +43,13 @@ print(d_mat)
 
 - [https://www.dropbox.com/s/sgg7d9s6mxxtu41/01_3_Dimensionality Reduction_PCA and MDS.pdf?dl=0](https://www.dropbox.com/s/sgg7d9s6mxxtu41/01_3_Dimensionality%20Reduction_PCA%20and%20MDS.pdf?dl=0) (자세한 증명)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fd36b3bc-a7a4-4297-8c30-38c6f9be1445/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/MDS/images/Untitled%202.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/41c05a0a-f773-4f0d-a046-0298ee0c95f6/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/MDS/images/Untitled%203.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8aa0f63d-a8f6-46e6-8e90-dcfd98d17f9c/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/MDS/images/Untitled%204.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e8a119a5-6a5a-4146-b3b3-fc2292bea9c1/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/MDS/images/Untitled%205.png)
 
 거리 행렬 D를 사용하여 내적 행렬 B를 만든다.
 
@@ -62,7 +62,7 @@ B = -H.dot(d_mat).dot(H)/2
 
 ## Step 3 : B의 **eigenvector, eigenvalue를 통해 coordinate X(nxp) 구하기**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ce7ce916-5835-404d-bdc2-46f8dedef44e/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/MDS/images/Untitled%206.png)
 
 B는 rank p의 psd이기 때문에 p개의 non-negative eigenvalue와 n-p개의 zero eigenvalue를 갖는다.
 
@@ -101,7 +101,7 @@ with plt.style.context("seaborn-darkgrid"):
     plt.show()
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3ad56de5-cdc1-4fc9-9c25-f130109a0933/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/MDS/images/Untitled%207.png)
 
 - reference
 
