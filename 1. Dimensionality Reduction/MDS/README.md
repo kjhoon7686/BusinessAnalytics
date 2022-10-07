@@ -6,7 +6,7 @@
 
 ## PCA vs MDS
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/858035e9-0133-48a7-967e-2202626eafdd/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/MDS/images/Untitled.png)
 
 ## Step 1 : Distance Matrix 만들기
 
