@@ -12,7 +12,7 @@
 
 - distance의 성질
 
-![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/MDS/images/Untitled%201.png){: width="100" height="100"}
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/MDS/images/Untitled%201.png){: width="20" height="20"}
 
 mds의 과정은 간단하다.
 
