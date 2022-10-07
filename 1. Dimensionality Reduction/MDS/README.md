@@ -43,13 +43,13 @@ print(d_mat)
 
 - [https://www.dropbox.com/s/sgg7d9s6mxxtu41/01_3_Dimensionality Reduction_PCA and MDS.pdf?dl=0](https://www.dropbox.com/s/sgg7d9s6mxxtu41/01_3_Dimensionality%20Reduction_PCA%20and%20MDS.pdf?dl=0) (자세한 증명)
 
-<img src="https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/MDS/images/Untitled%202.png" width="50%" height="50%"/>
+<img src="https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/MDS/images/Untitled%202.png" width="20%" height="20%"/>
 
-<img src="https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/MDS/images/Untitled%203.png" width="50%" height="50%"/>
+<img src="https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/MDS/images/Untitled%203.png" width="20%" height="20%"/>
 
-<img src="https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/MDS/images/Untitled%204.png" width="50%" height="50%"/>
+<img src="https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/MDS/images/Untitled%204.png" width="20%" height="20%"/>
 
-<img src="https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/MDS/images/Untitled%205.png" width="50%" height="50%"/>
+<img src="https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/MDS/images/Untitled%205.png" width="20%" height="20%"/>
 
 거리 행렬 D를 사용하여 내적 행렬 B를 만든다.
 
