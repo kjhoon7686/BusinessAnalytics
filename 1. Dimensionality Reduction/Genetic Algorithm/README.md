@@ -178,3 +178,5 @@ def generations(df,label,size,n_feat,cutoff,n_parents,mutation_rate,n_gen,X_trai
         best_score.append(scores[0])
     return best_chromo,best_score
 ```
+
+- reference : https://www.kaggle.com/code/tanmayunhale/genetic-algorithm-for-feature-selection
