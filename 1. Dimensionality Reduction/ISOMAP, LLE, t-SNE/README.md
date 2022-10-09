@@ -141,13 +141,13 @@ KL-divergence는 두 확률 분포 사이의 차이를 계산해주는 비대칭
 
 가우시안 분포는 평균에 가까운 부분의 확률값이 높고 꼬리쪽으로 갈수록 확률이 급격하게 낮아진다는 특성을 보인다. 그래서 일반적인 SNE를 사용하면 일정 거리를 넘어가면 거리에 상관없이 선택될 확률의 차이가 매우 적어진다. 이를 Crowding problem이라고 부른다. 따라서 t-SNE는 이를 보완하기 위해 만들어진 방식으로 가우시안 분포 대신 꼬리쪽의 분포가 두꺼운 t 분포를 사용한다. t-SNE는 고차원에서의 거리는 가우시안 분포를 사용하고 저차원에서의 거리는 t 분포를 사용한다. 
 
-![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/ISOMAP%2C%20LLE%2C%20t-SNE/images/Untitled%211.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/ISOMAP%2C%20LLE%2C%20t-SNE/images/Untitled%2011.png)
 
 - 예시
 
-![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/ISOMAP%2C%20LLE%2C%20t-SNE/images/Untitled%212.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/ISOMAP%2C%20LLE%2C%20t-SNE/images/Untitled%2012.png)
 
-![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/ISOMAP%2C%20LLE%2C%20t-SNE/images/Untitled%213.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/ISOMAP%2C%20LLE%2C%20t-SNE/images/Untitled%2013.png)
 
 - reference
 
