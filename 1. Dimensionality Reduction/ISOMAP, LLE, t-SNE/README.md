@@ -2,7 +2,7 @@
 
 # ISOMAP(Isometric Feature Mapping)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dfd837a9-72d7-45ec-a1bd-239fe655e63b/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/ISOMAP%2C%20LLE%2C%20t-SNE/images/Untitled.png)
 
 Isomap은 pca와 mds의 특징을 결합한 알고리즘이다. 좌측 그림에서의 euclidean distance는 짧지만 데이터의 실제 특성을 반영하는 manifold에서는 우측 그림에서처럼 거리가 멀다. isomap은 neighborhood graph를 통해 고차원에서의 intrinsic distance를 찾고 이를 축소된 차원에서 표현하는 방법론이다.
 
