@@ -31,7 +31,7 @@ class Graph(object):
 
 - Step2 : 포인트들 간의 최단 거리를 계산한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/570b74c8-7a14-48af-8858-30ae9f091502/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/ISOMAP%2C%20LLE%2C%20t-SNE/images/Untitled%201.png)
 
 step 1에서 만든 neighborhood graph를 바탕으로 distance matrix를 계산한다. 이때 모든 데이터 포인트들 간의 거리를 구해야 하기 때문에 계산 복잡도가 높다.
 
@@ -83,9 +83,9 @@ def isomap(input, n_neighbors, n_components, n_jobs):
     return(embedding)
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/76dd1121-06d3-45a0-9931-37fdce65ed66/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/ISOMAP%2C%20LLE%2C%20t-SNE/images/Untitled%202.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1ea8b2d0-cd3a-43ff-a7d0-4a072650e695/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/ISOMAP%2C%20LLE%2C%20t-SNE/images/Untitled%203.png)
 
 reference
 
@@ -104,22 +104,22 @@ LLE는 고차원 공간의 인접 데이터들을 선형적 구조를 유지한 
 
 LLE Procedure
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d9ea5738-248d-430c-a16a-b48fb5d0d0ea/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/ISOMAP%2C%20LLE%2C%20t-SNE/images/Untitled%204.png)
 
 - Step 1 : 각 데이터 포인트에서 k개의 이웃 계산
 - Step 2 : 가중치 행렬 구성
 
 neighborhood로부터 각 데이터를 가장 잘 표현할 수 있는 가중치 행렬을 계산한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/03d823b2-b13f-4356-9b3c-dd8ba44d3018/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/ISOMAP%2C%20LLE%2C%20t-SNE/images/Untitled%205.png)
 
 - Step 3 : 가중치 행렬 W를 가장 잘 보존할 수 있는 임베딩 벡터 계산
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8e3a633b-c792-4f51-a6e7-23f4cfa85b85/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/ISOMAP%2C%20LLE%2C%20t-SNE/images/Untitled%206.png)
 
 - 예시
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/50f220e2-db46-4551-8a7c-7014abbbe72c/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/ISOMAP%2C%20LLE%2C%20t-SNE/images/Untitled%207.png)
 
 ## t-SNE
 
@@ -127,15 +127,15 @@ neighborhood로부터 각 데이터를 가장 잘 표현할 수 있는 가중치
 
 t-SNE가 무엇인지 알기 위해서는 SNE부터 알아보아야 한다. SNE(Stochastic Neighbor Embedding)는 local pairwise distance를 확률적으로 정의하여 차원을 축소한다. 두 객체 간의 거리는 고차원에서 이웃이 될 확률과 저차원에서 이웃이 될 확률 두 종류로 가우시안 분포를 기준으로 하여 정의한다. 이 두 종류의 거리가 일치하도록 하는 것이 t-SNE의 목표이다. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9c36d98f-dead-4054-8cd1-e7a0a6b22260/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/ISOMAP%2C%20LLE%2C%20t-SNE/images/Untitled%208.png)
 
 2) KL-divergence
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/67569b36-fb1a-4a34-9e5b-8f63ae713ba7/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/ISOMAP%2C%20LLE%2C%20t-SNE/images/Untitled%209.png)
 
 KL-divergence는 두 확률 분포 사이의 차이를 계산해주는 비대칭 지표이다. SNE에서 언급했던 두 종류의 거리를 KL-divergence를 통해 비교하여 이를 최소화하는 방향으로 학습이 진행된다. 학습은 gradient descent를 통해 수행된다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/52366ecb-8c8b-4e49-8d6c-f646d51dc28e/Untitled.png)
+![Untitled](https://github.com/kjhoon7686/BusinessAnalytics/blob/main/1.%20Dimensionality%20Reduction/ISOMAP%2C%20LLE%2C%20t-SNE/images/Untitled%210.png)
 
 3) t-SNE
 
