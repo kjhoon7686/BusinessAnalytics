@@ -646,7 +646,7 @@ RBF Kernel SVR에서는 C가 고정되어 있을 때 epsilon이 커질수록 eps
 
 <figure class='half'>
     <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199211873-46f2acb1-b553-4470-848a-dfc894467c28.png width='45%',h`eight='50%'>`
-    <img src=https://user-images.githubusercontent.com/79893946/199211237-b153f092-7479-431f-9e2e-ba10fd8f7225.pn width='45%',h`eight='50%'>`
+    <img src=https://user-images.githubusercontent.com/79893946/199211237-b153f092-7479-431f-9e2e-ba10fd8f7225.png width='45%',h`eight='50%'>`
 </figure> 
 
 <figure class='half'>
