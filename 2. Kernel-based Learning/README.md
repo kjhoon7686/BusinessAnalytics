@@ -16,6 +16,19 @@
 			+ a. In C-SVM, result by hyperparameter C
 			+ b. In RBF Kernel Function SVM, result by hyperparameter C, $\gamma$
 			+ c. In Polynomial Kernel Function, result by hyperparameter degree, r
+2. Support Vector Regression (SVR)
+	- 개념
+		* SVR이란
+		* SVR optimization
+		* Kernel Trick
+	- 실험
+		* SVR 구현 코드
+		+ SVR kernel function과 그 hyperparameter에 따른 결과 비교  
+			+ a. Linear SVR - Hyperparameter C에 따른 결과
+			+ b. Linear SVR - Hyperparameter epsilon에 따른 결과
+			+ c. RBF Kernel SVR - Hyperparameter C에 따른 결과
+			+ d. RBF Kernel SVR - Hyperparameter epsilon에 따른 결과
+			+ e. RBF Kernel SVR - Hyperparameter gamma에 따른 결과
 			
 
 # Support Vector Machine
