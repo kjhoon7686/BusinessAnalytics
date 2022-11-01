@@ -585,8 +585,6 @@ y=3+2log(x)+4sin(x) 라는 함수에 noise를 주어 500개의 샘플 데이터�
 C가 작아질수록 fitting된 함수의 오차를 무시하게 됨으로 직선에 가까운 예측선이 만들어지고 기울기가 0에 가까워지는 것을 확인할 수 있다.
 
 b. **Linear SVR - Hyperparameter epsilon에 따른 결과**
-![image](https://user-images.githubusercontent.com/79893946/199209662-0050efb2-9563-4a6c-a5ee-131984bf507f.png)
-
 
 <figure class='half'>
     <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199209235-d0020a96-52bd-4c8b-8726-12935e6c6b68.png width='45%',h`eight='50%'>`
@@ -607,49 +605,60 @@ $\epsilon$이 커질수록 epsilon-tube가 커지고 이에 따라 epsilon-tube�
 
 c. **RBF Kernel SVR - Hyperparameter C에 따른 결과**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7b884182-058d-4398-863a-48a5f5faee64/Untitled.png)
+<figure class='half'>
+    <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199210046-25f8633e-9a45-4a06-b5dd-8e7f9fa51e30.png width='45%',h`eight='50%'>`
+    <img src=https://user-images.githubusercontent.com/79893946/199210104-18073a6e-ef18-43b7-82a9-66ce2c422d2b.png width='45%',h`eight='50%'>`
+</figure> 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/db94d105-07d8-407a-9a7b-178a5406b8a1/Untitled.png)
+<figure class='half'>
+    <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199210189-f4f1db18-c527-4f8a-9bcf-7d246fde4181.png width='45%',h`eight='50%'>`
+    <img src=https://user-images.githubusercontent.com/79893946/199210362-0a471c3f-24db-4136-822e-b9ce24be4305.png width='45%',h`eight='50%'>`
+</figure> 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a1c17e65-f035-4188-8f71-15b96b4baaae/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6a14b066-b96b-46c3-b087-1fb1e33e8ccf/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/538f28d3-f869-4c53-b366-345e1759789c/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/69ee382f-e0d5-433c-87bf-d4fadbac9e0c/Untitled.png)
+<figure class='half'>
+    <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199210449-b9fb8e8b-e410-4a15-9621-214e6ff00052.png width='45%',h`eight='50%'>`
+    <img src=https://user-images.githubusercontent.com/79893946/199210501-0c9585c2-0575-40f6-87c2-002ffbcb03c6.png width='45%',h`eight='50%'>`
+</figure> 
 
 RBF Kernel SVR에서는 C가 클수록 complex한 적합식을 만들기 때문에 overfitting이 되고, C가 작을수록 general한 식을 만들기 때문에 underfitting이 되는 것을 확인할 수 있다. 
 
 d. **RBF Kernel SVR - Hyperparameter epsilon에 따른 결과**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8bc7e698-6d6c-4c72-80cd-7c2a168d0cd4/Untitled.png)
+<figure class='half'>
+    <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199210607-6231c0f6-d7bb-439f-a787-867e232b9ed5.png width='45%',h`eight='50%'>`
+    <img src=https://user-images.githubusercontent.com/79893946/199210661-b7ebfc42-f873-4d31-9239-86cc4b1c15a2.png width='45%',h`eight='50%'>`
+</figure> 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/554dbb8d-02ba-439f-bf27-f61f4957c5a5/Untitled.png)
+<figure class='half'>
+    <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199210705-651ea622-4561-495f-89fb-74ca47846b37.png width='45%',h`eight='50%'>`
+    <img src=https://user-images.githubusercontent.com/79893946/199210777-8dd5caec-1ff8-4991-b528-38f03bfdc694.png width='45%',h`eight='50%'>`
+</figure> 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d3ffcb6a-f487-418c-9a5a-97d3b214cc56/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bd9d9183-56f9-4303-a97c-2e017142fb5a/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6002fccd-5e7f-499b-8aab-08afec1408bd/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dcbfcfa2-cdbe-467e-a2d9-2bcd0a553e7e/Untitled.png)
+<figure class='half'>
+    <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199210837-90b1e9b1-79f4-498f-9887-9b404a666d74.png width='45%',h`eight='50%'>`
+    <img src=https://user-images.githubusercontent.com/79893946/199210906-492ac810-66b6-4cf5-9cf1-a600ec03cb3e.png width='45%',h`eight='50%'>`
+</figure> 
 
 RBF Kernel SVR에서는 C가 고정되어 있을 때 epsilon이 커질수록 epsilon-tube가 커지지만 fitting된 회귀선 자체는 변하지 않는 것을 확인할 수 있다.
 
 e. **RBF Kernel SVR - Hyperparameter gamma에 따른 결과**
+![image](https://user-images.githubusercontent.com/79893946/199211356-51a89904-c64f-40cb-8ade-061d5950552e.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9f94b5f3-2baa-4f28-85ce-436336c9f1f0/Untitled.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0f1dc498-7a7a-4be9-82c7-bf966ff8fe66/Untitled.png)
+<figure class='half'>
+    <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199211070-58e0ab99-18bd-4b69-9658-05495b4aa58b.png width='45%',h`eight='50%'>`
+    <img src=https://user-images.githubusercontent.com/79893946/199211117-e334f2b0-3c39-4bb0-b6ad-59134376274a.png width='45%',h`eight='50%'>`
+</figure> 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ec18dc4e-7d55-47cd-aeb4-c4df8b08aad1/Untitled.png)
+<figure class='half'>
+    <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199211163-61855ebb-e1ee-42c2-bdfe-b2811d970759.png width='45%',h`eight='50%'>`
+    <img src=https://user-images.githubusercontent.com/79893946/199211237-b153f092-7479-431f-9e2e-ba10fd8f7225.pn width='45%',h`eight='50%'>`
+</figure> 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a4af411a-a6a4-4ad2-953c-d3598b5274dd/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b6034702-0f43-4500-be27-90f04fe955ea/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ffdecc21-c9df-4da0-a203-2369cc6b26b2/Untitled.png)
+<figure class='half'>
+    <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199211298-df8ca884-3d9f-4502-8bcd-903b62f4ae17.png width='45%',h`eight='50%'>`
+    <img src=https://user-images.githubusercontent.com/79893946/199211356-51a89904-c64f-40cb-8ade-061d5950552e.png width='45%',h`eight='50%'>`
+</figure> 
 
 RBF Kernel SVR에서는 C와 epsilon이 고정되어 있을 때 gamma가 커질수록 complex한 fitting 경향을 보이며 즉 overfitting의 경향성이 있음을 알 수 있다.
 
