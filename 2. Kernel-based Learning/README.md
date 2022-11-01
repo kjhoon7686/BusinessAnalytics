@@ -664,11 +664,9 @@ RBF Kernel SVR에서는 C와 epsilon이 고정되어 있을 때 gamma가 커질�
 
 
 
-reference
-
-[https://zernes.github.io/SVM/](https://zernes.github.io/SVM/)
-
-[https://www.kaggle.com/code/carlosdg/effect-of-hyperparameters-and-kernels-on-svms/notebook](https://www.kaggle.com/code/carlosdg/effect-of-hyperparameters-and-kernels-on-svms/notebook)
-https://changhyun-lee.github.io/example/Support-Vector-Machine
-https://github.com/KS-prashanth/Epslion-SVR/blob/main/Epsilon_svr/epsilonsvr.py
+**reference**
+- https://zernes.github.io/SVM/
+- https://www.kaggle.com/code/carlosdg/effect-of-hyperparameters-and-kernels-on-svms/notebook
+- https://changhyun-lee.github.io/example/Support-Vector-Machine
+- https://github.com/KS-prashanth/Epslion-SVR/blob/main/Epsilon_svr/epsilonsvr.py
 
