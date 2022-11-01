@@ -114,13 +114,6 @@ case1과 case2는 모두 분류 경계면이 선형이기 때문에 분류 경�
 
 ## 실험
 
-1. C-SVM vs $\nu$-SVM
-    1. Linear Case
-    2. Nonlinear Case
-2. SVM의 kernel function과 그 hyperparameter에 따른 결과 비교
-    1. In C-SVM, result by hyperparameter C
-    2. In RBF Kernel Function SVM, result by hyperparameter C, $\gamma$
-    3. In Polynomial Kernel Function, result by hyperparameter degree, r 
 
 ### SVM 구현 코드
 
@@ -301,17 +294,17 @@ def predict(self, x: np.ndarray) -> np.ndarray:
 
 C-SVM과 $\nu$-SVM은 같은 parameter를 다르게 representation하고 수학적 표현이 다른 유사한 방식의 svm이다. 각각의 표현식을 살펴보았을 때는 어느 부분이 비슷하고, 어느 부분이 차이가 있는지 알기 힘든데, 이를 데이터에 각각 적용해보면서 알아보자.
 
-1. **Linear Case**
+**a. Linear Case**
 
 dataset은 scikitlearn의 make_blobs 함수를 통해 선형으로 분리가능한 1000개의 데이터 샘플을 만들어서 실험하였다. 각 class에 따른 데이터의 분포는 다음과 같다.
 
 ![image](https://user-images.githubusercontent.com/79893946/199164495-1ec97428-b42f-43a5-a38b-64d07d90dfa3.png)
 
-1) C-SVM
+- C-SVM
 
 ![image](https://user-images.githubusercontent.com/79893946/199164513-a4dd3ef0-ec94-4452-87cd-69d6036fdb4a.png)
 
-2) $\nu$-SVM
+- $\nu$-SVM
 
 ![image](https://user-images.githubusercontent.com/79893946/199164531-a4dd6292-35b5-43c0-b578-68fe3f11e32e.png)
 
@@ -333,11 +326,11 @@ dataset은 scikitlearn의 make_circles 함수를 통해 원형으로 분포하�
 
 ![image](https://user-images.githubusercontent.com/79893946/199164574-235e8fed-e3c5-4bc6-b43e-63c250a6846b.png)
 
-1) C-SVM
+- C-SVM
 
 ![image](https://user-images.githubusercontent.com/79893946/199164593-ee4ddebd-bb77-4cfe-ad3e-756f4aa11ee9.png)
 
-2) $\nu$-SVM
+- $\nu$-SVM
 
 ![image](https://user-images.githubusercontent.com/79893946/199164608-fd8a882a-c38a-475f-a989-f14ec1951ec6.png)
 
@@ -385,7 +378,7 @@ iris data를 활용하여 실험을 진행하였다. iris data 중에서도 clas
 
 먼저 그림을 살펴보면 C-SVM에서 C가 커질수록 penalty를 많이 주기 때문에 margin이 작아지는 것을 확인할 수 있다.  
 
-C와 Accuracy를 살펴보면 너무 작거나 큰 C가 아닌 적당한 C를 선택해야 성능이 좋다는 것을 알 수 있다. 
+C와 Accuracy를 살펴보면 너무 작거나 큰 C가 아닌 적당한 C를 선택해야 성능이 좋다는 것을 알 수 있다.    
 
 **b. In RBF Kernel Function SVM, result by hyperparameter C, $\gamma$**
 
@@ -407,7 +400,7 @@ C와 Accuracy를 살펴보면 너무 작거나 큰 C가 아닌 적당한 C를 �
 
 먼저 그림을 살펴보면 RBF Kernel Function SVM에서 C값에 따라 차이는 있지만 C가 같은 경우에 $\gamma$가 작을수록 선형에 가까운 결정경계를 만들고 $\gamma$가 클수록 복잡한 결정경계를 만드는 것을 확인할 수 있다.
 
-C, $\gamma$와 Accuracy를 살펴보면 C와 $\gamma$의 적절한 조합을 선택해야 모델의 성능이 좋은 것을 확인할 수 있다.
+C, $\gamma$와 Accuracy를 살펴보면 C와 $\gamma$의 적절한 조합을 선택해야 모델의 성능이 좋은 것을 확인할 수 있다.   
 
 **c. In Polynomial Kernel Function, result by hyperparameter degree, r**
 
@@ -440,7 +433,7 @@ C, $\gamma$와 Accuracy를 살펴보면 C와 $\gamma$의 적절한 조합을 선
 
 먼저 그림을 살펴보면 Polynomial Kernel Function SVM에서 다른 하이퍼파라미터가 같을 때, r이 작아질수록 더 복잡한 결정경계를 만드는 것을 확인할 수 있다. 또한 다른 하이퍼파라미터가 같을 때, 차수가 높을수록 더 복잡한 결정경계를 만드는 것을 확인할 수 있다. 
 
-하이퍼파라미터들과 Accuracy를 살펴보면 이렇게 하이퍼파라미터가 많을 때에는 하나의 하이퍼파라미터와 뚜렷한 상관관계를 보이기보다는 하이퍼파라미터 조합에 따라 성능이 결정되기 때문에 하이퍼파라미터 검색 알고리즘 등을 통해 가장 적절한 하이퍼파라미터를 찾는 것이 중요하다는 결론을 내릴 수 있다. 
+하이퍼파라미터들과 Accuracy를 살펴보면 이렇게 하이퍼파라미터가 많을 때에는 하나의 하이퍼파라미터와 뚜렷한 상관관계를 보이기보다는 하이퍼파라미터 조합에 따라 성능이 결정되기 때문에 하이퍼파라미터 검색 알고리즘 등을 통해 가장 적절한 하이퍼파라미터를 찾는 것이 중요하다는 결론을 내릴 수 있다.    
 
 # Support Vector Regression
 
@@ -504,6 +497,8 @@ svr은 loss function에 따라 그 종류가 정의되며 다양하다.
 
 ## 실험
 
+### SVR 구현코드
+
 ```python
 def eps_svr(X_train,Y_train,X_test,kernel,epsilon,c,kernel_param):
     """implements the CVXOPT version of epsilon SVR"""
@@ -565,7 +560,7 @@ y=3+2log(x)+4sin(x) 라는 함수에 noise를 주어 500개의 샘플 데이터�
 
 ![image](https://user-images.githubusercontent.com/79893946/199183851-8f535363-f4b6-4c0b-b218-14f5ebf558c9.png)
 
-1. **Linear SVR - Hyperparameter C에 따른 결과**
+**a. Linear SVR - Hyperparameter C에 따른 결과**
 
 <figure class='half'>
     <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199184076-5172b50a-ff7d-4bb5-b15b-593d368e6afd.png width='45%',h`eight='50%'>`
@@ -584,7 +579,7 @@ y=3+2log(x)+4sin(x) 라는 함수에 noise를 주어 500개의 샘플 데이터�
 
 C가 작아질수록 fitting된 함수의 오차를 무시하게 됨으로 직선에 가까운 예측선이 만들어지고 기울기가 0에 가까워지는 것을 확인할 수 있다.
 
-b. **Linear SVR - Hyperparameter epsilon에 따른 결과**
+**b. Linear SVR - Hyperparameter epsilon에 따른 결과**
 
 <figure class='half'>
     <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199209235-d0020a96-52bd-4c8b-8726-12935e6c6b68.png width='45%',h`eight='50%'>`
@@ -603,7 +598,7 @@ b. **Linear SVR - Hyperparameter epsilon에 따른 결과**
 
 $\epsilon$이 커질수록 epsilon-tube가 커지고 이에 따라 epsilon-tube의 오차 허용 범위가 넓어지는 것을 확인할 수 있다.
 
-c. **RBF Kernel SVR - Hyperparameter C에 따른 결과**
+**c. RBF Kernel SVR - Hyperparameter C에 따른 결과**
 
 <figure class='half'>
     <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199210046-25f8633e-9a45-4a06-b5dd-8e7f9fa51e30.png width='45%',h`eight='50%'>`
@@ -622,7 +617,7 @@ c. **RBF Kernel SVR - Hyperparameter C에 따른 결과**
 
 RBF Kernel SVR에서는 C가 클수록 complex한 적합식을 만들기 때문에 overfitting이 되고, C가 작을수록 general한 식을 만들기 때문에 underfitting이 되는 것을 확인할 수 있다. 
 
-d. **RBF Kernel SVR - Hyperparameter epsilon에 따른 결과**
+**d. RBF Kernel SVR - Hyperparameter epsilon에 따른 결과**
 
 <figure class='half'>
     <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199210607-6231c0f6-d7bb-439f-a787-867e232b9ed5.png width='45%',h`eight='50%'>`
@@ -641,7 +636,7 @@ d. **RBF Kernel SVR - Hyperparameter epsilon에 따른 결과**
 
 RBF Kernel SVR에서는 C가 고정되어 있을 때 epsilon이 커질수록 epsilon-tube가 커지지만 fitting된 회귀선 자체는 변하지 않는 것을 확인할 수 있다.
 
-e. **RBF Kernel SVR - Hyperparameter gamma에 따른 결과**
+**e. RBF Kernel SVR - Hyperparameter gamma에 따른 결과**
 
 
 <figure class='half'>
