@@ -411,6 +411,212 @@ C, $\gamma$와 Accuracy를 살펴보면 C와 $\gamma$의 적절한 조합을 선
 
 하이퍼파라미터들과 Accuracy를 살펴보면 이렇게 하이퍼파라미터가 많을 때에는 하나의 하이퍼파라미터와 뚜렷한 상관관계를 보이기보다는 하이퍼파라미터 조합에 따라 성능이 결정되기 때문에 하이퍼파라미터 검색 알고리즘 등을 통해 가장 적절한 하이퍼파라미터를 찾는 것이 중요하다는 결론을 내릴 수 있다. 
 
+# Support Vector Regression
+
+## 개념
+
+### SVR이란
+
+svr은 svm의 regression 버전으로 svm에서의 hyperplane은 data를 가장 잘 분류하는 역할을 하지만, svr에서의 hyperplane은 data를 가장 잘 표현하는 역할을 한다는 차이가 있다. classification과 regression의 차이이다. 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/87fe7bed-f49e-4e7c-b011-37f13a68ee16/Untitled.png)
+
+이번 tutorial에서는 가장 많이 사용되는 svr 방법 중에 하나인 epsilon-svr에 대해서 살펴보도록 하겠다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5ae72fb8-3109-4e83-9f31-8cd12d5bce53/Untitled.png)
+
+(C)가 epsilon-svr의 그림이다. epsilon-svr은 기본적으로 데이터에 노이즈가 존재한다고 가정하기 때문에 적합된 회귀선 위아래에 epsilon만큼을 더하고 뺀 부분에서는 penelty를 부과하지 않는다. 적합된 회귀선에 epsilon을 더하고 뺀 부분을 epsilon-tube라고 한다. 다시 말하면 epsilon-tube 내의 데이터에는 penelty를 부과하지 않고 epsilon-tube 바깥에 있는 데이터에만 tube에서 데이터의 거리만큼 penelty를 부과한다. 이는 (D)의 loss function에서도 확인할 수 있다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e1b50316-7e57-4c8d-b43e-476ad418f32c/Untitled.png)
+
+epsilon-svr에서의 목적함수는 선형 회귀식이 loss function은 w를 최소화함으로써 general한 함수를 만들고, hinge loss라고도 불리는 오차의 합을 최소화함으로써 fitting의 적합도를 올리는 것을 목적으로 한다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/25086485-5108-4b97-a35d-6367324824ec/Untitled.png)
+
+이는 ridge regression의 목적식과도 유사하다. svr에서는 w를 최소화하는 것으로써 simple한 함수를 fitting한다면 ridge regression에서는 회귀계수들에 penelty를 줌으로써 general한 함수를 fitting한다. 또한 svr에서는 hinge loss의 c를 통해 예측오차를 줄인다면 ridge regression에서는 적합된 회귀식과 실제값과의 차이를 최소화하는 것을 통해 예측오차를 줄인다. 
+
+### SVR optimization
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e5fe79ef-7f8e-467a-a1d8-edb766dce765/Untitled.png)
+
+먼저 다음의 loss function에서 lagrangian multiplier를 사용해서 lagrangian primal problem을 만든다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8fe6ae0a-4692-42dd-9a20-9dfa6f1bb66b/Untitled.png)
+
+다음으로 편미분을 통해 (1), (2), (3)의 식을 얻는다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a7bd600a-cb95-489a-a95b-3fb07ff7300a/Untitled.png)
+
+앞서 구한 식을  lagrangian primal problem에 대입함으로써 dual problem으로 바꾸어 준다,
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0e0e2ed9-6a6f-4d22-bdae-49be0dd99fb0/Untitled.png)
+
+이를 통해 decision function, 즉 회귀식을 적합할 수 있다. 
+
+### Kernel Trick
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d5ee734e-3a3e-4b95-855a-a1b5855a5657/Untitled.png)
+
+svm에서와 마찬가지로 비선형적인 데이터 분포를 fitting하기 위해 저차원의 데이터를 고차원의 데이터로 kernel function을 통해 mapping하여 svr을 진행할 수 있다. 이때 사용하는 방법이 kernel trick이다
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e0a94c13-c707-4be6-9399-c3a09334adc8/Untitled.png)
+
+kernel trick을 사용하여 optimization을 하면 앞서 설명한 svr에서 kernel function을 사용하는 것 이외에는 매우 유사한 방법을 사용한다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c9ce5073-3171-4475-8140-28e24dcd8a41/Untitled.png)
+
+svr은 loss function에 따라 그 종류가 정의되며 다양하다. 
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3bb9e438-a7f3-42df-b246-c08fe49f06ac/Untitled.png)
+
+다음은 svr의 loss functon의 따른 회귀선인데 비선형적인 데이터들을 kernel svr들이 더 잘 fitting하는 것을 확인할 수 있다. 
+
+## 실험
+
+```python
+def eps_svr(X_train,Y_train,X_test,kernel,epsilon,c,kernel_param):
+    """implements the CVXOPT version of epsilon SVR"""
+    m, n = X_train.shape      #m is num samples, n is num features
+    #Finding the kernels i.e. k(x,x')
+    k = np.zeros((m,m))
+    for i in range(m):
+        for j in range(m):
+            k[i][j] = kernel(X_train[i,:], X_train[j,:], kernel_param)
+
+    P= np.hstack((k,-1*k))
+    P= np.vstack((P,-1*P))
+    q= epsilon*np.ones((2*m,1))
+    qadd=np.vstack((-1*Y_train,Y_train))
+    q=q+qadd
+    A=np.hstack((np.ones((1,m)),-1*(np.ones((1,m)))))
+
+    #define matrices for optimization problem       
+    P = cvxopt.matrix(P)
+    q = cvxopt.matrix(q)
+    A = cvxopt.matrix(A)
+    b = cvxopt.matrix(np.zeros((1,1)))
+
+    c= float(c)
+    temp=np.vstack((np.eye(2*m),-1*np.eye(2*m)))
+    G=cvxopt.matrix(temp)
+
+    temp=np.vstack((c*np.ones((2*m,1)),np.zeros((2*m,1))))
+    h = cvxopt.matrix(temp)
+    #solve the optimization problem
+    sol = cvxopt.solvers.qp(P,q,G,h,A,b,solver='glpk')
+    #lagrange multipliers
+    l = np.ravel(sol['x'])
+    #extracting support vectors i.e. non-zero lagrange multiplier
+    alpha=l[0:m]
+    alpha_star=l[m:]
+
+    bias= sol['y']
+    print("bias="+str(bias))
+    #find weight vector and predict y
+    Y_pred = np.zeros(len(X_test))
+    for i in range(len(X_test)):
+        res=0
+        for u_,v_,z in zip(alpha,alpha_star,X_train):
+            res+=(u_ - v_)*kernel(X_test[i],z,kernel_param)
+        Y_pred[i]= res
+    Y_pred = Y_pred+bias[0,0]
+
+    return Y_pred
+```
+
+kernel function의 종류와 $\epsilon$ 값 그리고 kernel function에 따른 parameter를 인자로 받아 SVM에서와 마찬가지로 cvxopt library를 활용하여 optimization을 하고 이를 바탕으로 prediction을 진행하는 단계로 작성되었다.
+
+### SVR kernel function과 그 hyperparameter에 따른 결과 비교
+
+**Data**
+
+y=3+2log(x)+4sin(x) 라는 함수에 noise를 주어 500개의 샘플 데이터를 생성하여 결과 비교를 진행하였다.
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f0013187-5130-4762-bad1-968dc0ee7af8/Untitled.png)
+
+1. **Linear SVR - Hyperparameter C에 따른 결과**
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fc23994e-2222-4994-8792-389f609fa3d6/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a20b3de9-2e45-4a66-899a-2a7ea5eae98b/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c67149f5-2d91-4499-8bfe-c5ce07c1c5c8/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d3a6a243-bab7-4bab-8028-de83d2185100/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9f7a89c8-bcf4-4afc-a199-c3c5093e3126/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5c56534f-7345-4c9b-9f00-ab8e5bb6fd3b/Untitled.png)
+
+C가 작아질수록 fitting된 함수의 오차를 무시하게 됨으로 직선에 가까운 예측선이 만들어지고 기울기가 0에 가까워지는 것을 확인할 수 있다.
+
+b. **Linear SVR - Hyperparameter epsilon에 따른 결과**
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f974597b-3fe6-4be4-815d-71387814e797/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ff093376-28ed-459f-95fb-536866be2e44/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3b5f9057-ab75-4a63-870d-86104d52887c/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d8f19c01-ea91-4df8-bcff-e0c73c20ab2a/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/862a2761-56ce-4fcc-b996-3caf633dcd81/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/faddb0c9-c3fa-4f1e-bf91-d205906307ea/Untitled.png)
+
+$\epsilon$이 커질수록 epsilon-tube가 커지고 이에 따라 epsilon-tube의 오차 허용 범위가 넓어지는 것을 확인할 수 있다.
+
+c. **RBF Kernel SVR - Hyperparameter C에 따른 결과**
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7b884182-058d-4398-863a-48a5f5faee64/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/db94d105-07d8-407a-9a7b-178a5406b8a1/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a1c17e65-f035-4188-8f71-15b96b4baaae/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6a14b066-b96b-46c3-b087-1fb1e33e8ccf/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/538f28d3-f869-4c53-b366-345e1759789c/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/69ee382f-e0d5-433c-87bf-d4fadbac9e0c/Untitled.png)
+
+RBF Kernel SVR에서는 C가 클수록 complex한 적합식을 만들기 때문에 overfitting이 되고, C가 작을수록 general한 식을 만들기 때문에 underfitting이 되는 것을 확인할 수 있다. 
+
+d. **RBF Kernel SVR - Hyperparameter epsilon에 따른 결과**
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8bc7e698-6d6c-4c72-80cd-7c2a168d0cd4/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/554dbb8d-02ba-439f-bf27-f61f4957c5a5/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d3ffcb6a-f487-418c-9a5a-97d3b214cc56/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bd9d9183-56f9-4303-a97c-2e017142fb5a/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6002fccd-5e7f-499b-8aab-08afec1408bd/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dcbfcfa2-cdbe-467e-a2d9-2bcd0a553e7e/Untitled.png)
+
+RBF Kernel SVR에서는 C가 고정되어 있을 때 epsilon이 커질수록 epsilon-tube가 커지지만 fitting된 회귀선 자체는 변하지 않는 것을 확인할 수 있다.
+
+e. **RBF Kernel SVR - Hyperparameter gamma에 따른 결과**
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9f94b5f3-2baa-4f28-85ce-436336c9f1f0/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0f1dc498-7a7a-4be9-82c7-bf966ff8fe66/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ec18dc4e-7d55-47cd-aeb4-c4df8b08aad1/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a4af411a-a6a4-4ad2-953c-d3598b5274dd/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b6034702-0f43-4500-be27-90f04fe955ea/Untitled.png)
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ffdecc21-c9df-4da0-a203-2369cc6b26b2/Untitled.png)
+
+RBF Kernel SVR에서는 C와 epsilon이 고정되어 있을 때 gamma가 커질수록 complex한 fitting 경향을 보이며 즉 overfitting의 경향성이 있음을 알 수 있다.
+
+
+
+
 reference
 
 [https://zernes.github.io/SVM/](https://zernes.github.io/SVM/)
