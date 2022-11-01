@@ -563,13 +563,13 @@ kernel function의 종류와 $\epsilon$ 값 그리고 kernel function에 따른 
 
 y=3+2log(x)+4sin(x) 라는 함수에 noise를 주어 500개의 샘플 데이터를 생성하여 결과 비교를 진행하였다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f0013187-5130-4762-bad1-968dc0ee7af8/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/199183851-8f535363-f4b6-4c0b-b218-14f5ebf558c9.png)
 
 1. **Linear SVR - Hyperparameter C에 따른 결과**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fc23994e-2222-4994-8792-389f609fa3d6/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/199184076-5172b50a-ff7d-4bb5-b15b-593d368e6afd.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a20b3de9-2e45-4a66-899a-2a7ea5eae98b/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/199184118-f782d75f-886e-4304-99cc-c5dbf649610f.png)
 
 ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c67149f5-2d91-4499-8bfe-c5ce07c1c5c8/Untitled.png)
 
