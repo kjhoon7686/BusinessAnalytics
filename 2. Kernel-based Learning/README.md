@@ -450,55 +450,55 @@ C, $\gamma$와 Accuracy를 살펴보면 C와 $\gamma$의 적절한 조합을 선
 
 svr은 svm의 regression 버전으로 svm에서의 hyperplane은 data를 가장 잘 분류하는 역할을 하지만, svr에서의 hyperplane은 data를 가장 잘 표현하는 역할을 한다는 차이가 있다. classification과 regression의 차이이다. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/87fe7bed-f49e-4e7c-b011-37f13a68ee16/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/199182911-986241c2-972d-4fcb-864a-22fdc570c0aa.png)
 
 이번 tutorial에서는 가장 많이 사용되는 svr 방법 중에 하나인 epsilon-svr에 대해서 살펴보도록 하겠다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5ae72fb8-3109-4e83-9f31-8cd12d5bce53/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/199182939-0f3bc870-7107-4661-8d42-77e895d9ac55.png)
 
 (C)가 epsilon-svr의 그림이다. epsilon-svr은 기본적으로 데이터에 노이즈가 존재한다고 가정하기 때문에 적합된 회귀선 위아래에 epsilon만큼을 더하고 뺀 부분에서는 penelty를 부과하지 않는다. 적합된 회귀선에 epsilon을 더하고 뺀 부분을 epsilon-tube라고 한다. 다시 말하면 epsilon-tube 내의 데이터에는 penelty를 부과하지 않고 epsilon-tube 바깥에 있는 데이터에만 tube에서 데이터의 거리만큼 penelty를 부과한다. 이는 (D)의 loss function에서도 확인할 수 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e1b50316-7e57-4c8d-b43e-476ad418f32c/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/199182975-b9c28588-568d-4412-b28c-428edb5d370d.png)
 
 epsilon-svr에서의 목적함수는 선형 회귀식이 loss function은 w를 최소화함으로써 general한 함수를 만들고, hinge loss라고도 불리는 오차의 합을 최소화함으로써 fitting의 적합도를 올리는 것을 목적으로 한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/25086485-5108-4b97-a35d-6367324824ec/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/199183225-e9fb03e0-0702-47bb-90aa-2592ebba2e45.png)
 
 이는 ridge regression의 목적식과도 유사하다. svr에서는 w를 최소화하는 것으로써 simple한 함수를 fitting한다면 ridge regression에서는 회귀계수들에 penelty를 줌으로써 general한 함수를 fitting한다. 또한 svr에서는 hinge loss의 c를 통해 예측오차를 줄인다면 ridge regression에서는 적합된 회귀식과 실제값과의 차이를 최소화하는 것을 통해 예측오차를 줄인다. 
 
 ### SVR optimization
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e5fe79ef-7f8e-467a-a1d8-edb766dce765/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/199183189-1d021ad4-7a08-444f-b535-21b24f1ca073.png)
 
 먼저 다음의 loss function에서 lagrangian multiplier를 사용해서 lagrangian primal problem을 만든다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8fe6ae0a-4692-42dd-9a20-9dfa6f1bb66b/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/199183292-dd845af5-e168-43d5-8508-2667d4aef096.png)
 
 다음으로 편미분을 통해 (1), (2), (3)의 식을 얻는다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a7bd600a-cb95-489a-a95b-3fb07ff7300a/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/199183340-fec3da20-6c40-444a-8d67-24157dad623f.png)
 
 앞서 구한 식을  lagrangian primal problem에 대입함으로써 dual problem으로 바꾸어 준다,
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0e0e2ed9-6a6f-4d22-bdae-49be0dd99fb0/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/199183410-a8603993-3cb7-4120-abf5-81d3c30e6f6c.png)
 
 이를 통해 decision function, 즉 회귀식을 적합할 수 있다. 
 
 ### Kernel Trick
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d5ee734e-3a3e-4b95-855a-a1b5855a5657/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/199183446-371522f2-6e6e-4d42-9936-be66a44a2aae.png)
 
 svm에서와 마찬가지로 비선형적인 데이터 분포를 fitting하기 위해 저차원의 데이터를 고차원의 데이터로 kernel function을 통해 mapping하여 svr을 진행할 수 있다. 이때 사용하는 방법이 kernel trick이다
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e0a94c13-c707-4be6-9399-c3a09334adc8/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/199183476-beb1cee6-8ebb-43db-9d5f-47c005920fe1.png)
 
 kernel trick을 사용하여 optimization을 하면 앞서 설명한 svr에서 kernel function을 사용하는 것 이외에는 매우 유사한 방법을 사용한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c9ce5073-3171-4475-8140-28e24dcd8a41/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/199183509-2c658733-10bc-497c-8311-add0e7db6b91.png)
 
 svr은 loss function에 따라 그 종류가 정의되며 다양하다. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3bb9e438-a7f3-42df-b246-c08fe49f06ac/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/199183531-682c6e01-592e-4c65-82d3-6c57195c6375.png)
 
 다음은 svr의 loss functon의 따른 회귀선인데 비선형적인 데이터들을 kernel svr들이 더 잘 fitting하는 것을 확인할 수 있다. 
 
