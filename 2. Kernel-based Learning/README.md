@@ -286,7 +286,7 @@ dataset은 scikitlearn의 make_blobs 함수를 통해 선형으로 분리가능�
 
 결과표
 
-|  | C-SVM |  ⁍-SVM |
+|  | C-SVM |  nu-SVM |
 | --- | --- | --- |
 | Accuracy | 0.893 | 0.897 |
 | Precision | 0.903 | 0.908 |
@@ -312,7 +312,7 @@ dataset은 scikitlearn의 make_circles 함수를 통해 원형으로 분포하�
 
 결과표
 
-|  | C-SVM |  ⁍-SVM |
+|  | C-SVM |  nu-SVM |
 | --- | --- | --- |
 | Accuracy | 1.000 | 0.997 |
 | Precision | 1.000 | 0.993 |
