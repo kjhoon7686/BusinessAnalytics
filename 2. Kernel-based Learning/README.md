@@ -566,37 +566,42 @@ y=3+2log(x)+4sin(x) 라는 함수에 noise를 주어 500개의 샘플 데이터�
 ![image](https://user-images.githubusercontent.com/79893946/199183851-8f535363-f4b6-4c0b-b218-14f5ebf558c9.png)
 
 1. **Linear SVR - Hyperparameter C에 따른 결과**
-<center class="half">
-   <img src="https://user-images.githubusercontent.com/79893946/199184076-5172b50a-ff7d-4bb5-b15b-593d368e6afd.png" width="150"/>
-   <img src="https://user-images.githubusercontent.com/79893946/199184118-f782d75f-886e-4304-99cc-c5dbf649610f.png" width="150"/>
 
-![image](https://user-images.githubusercontent.com/79893946/199184076-5172b50a-ff7d-4bb5-b15b-593d368e6afd.png)
+<figure class='half'>
+    <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199184076-5172b50a-ff7d-4bb5-b15b-593d368e6afd.png width='45%',h`eight='50%'>`
+    <img src=https://user-images.githubusercontent.com/79893946/199184118-f782d75f-886e-4304-99cc-c5dbf649610f.png width='45%',h`eight='50%'>`
+</figure>  
 
-![image](https://user-images.githubusercontent.com/79893946/199184118-f782d75f-886e-4304-99cc-c5dbf649610f.png)
+<figure class='half'>
+    <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199208840-1a2318ca-4f80-4135-bc1b-09b093bc1d06.png width='45%',h`eight='50%'>`
+    <img src=https://user-images.githubusercontent.com/79893946/199208892-0b378f69-7511-4aea-a0fb-48a64331df70.png width='45%',h`eight='50%'>`
+</figure> 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c67149f5-2d91-4499-8bfe-c5ce07c1c5c8/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d3a6a243-bab7-4bab-8028-de83d2185100/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9f7a89c8-bcf4-4afc-a199-c3c5093e3126/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5c56534f-7345-4c9b-9f00-ab8e5bb6fd3b/Untitled.png)
+<figure class='half'>
+    <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199208976-6375fe2f-08e0-41da-b7d2-4722dee8869a.png width='45%',h`eight='50%'>`
+    <img src=https://user-images.githubusercontent.com/79893946/199209052-3d0772dd-bbde-4492-ac33-5cb22afa2c01.png width='45%',h`eight='50%'>`
+</figure> 
 
 C가 작아질수록 fitting된 함수의 오차를 무시하게 됨으로 직선에 가까운 예측선이 만들어지고 기울기가 0에 가까워지는 것을 확인할 수 있다.
 
 b. **Linear SVR - Hyperparameter epsilon에 따른 결과**
+![image](https://user-images.githubusercontent.com/79893946/199209662-0050efb2-9563-4a6c-a5ee-131984bf507f.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f974597b-3fe6-4be4-815d-71387814e797/Untitled.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ff093376-28ed-459f-95fb-536866be2e44/Untitled.png)
+<figure class='half'>
+    <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199209235-d0020a96-52bd-4c8b-8726-12935e6c6b68.png width='45%',h`eight='50%'>`
+    <img src=https://user-images.githubusercontent.com/79893946/199209360-af8aa1c9-9826-4bc6-a8a6-bb1d1380d3a2.png width='45%',h`eight='50%'>`
+</figure> 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3b5f9057-ab75-4a63-870d-86104d52887c/Untitled.png)
+<figure class='half'>
+    <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199209407-db73cc6b-10f1-4a35-9a0f-5fcdea4c016d.png width='45%',h`eight='50%'>`
+    <img src=https://user-images.githubusercontent.com/79893946/199209458-054bedd3-2afa-4d69-9464-1c9b7cf3ebc6.png width='45%',h`eight='50%'>`
+</figure> 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d8f19c01-ea91-4df8-bcff-e0c73c20ab2a/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/862a2761-56ce-4fcc-b996-3caf633dcd81/Untitled.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/faddb0c9-c3fa-4f1e-bf91-d205906307ea/Untitled.png)
+<figure class='half'>
+    <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199209516-eecea4cc-4282-4a7e-a06a-8e8512fb3183.png width='45%',h`eight='50%'>`
+    <img src=https://user-images.githubusercontent.com/79893946/199209662-0050efb2-9563-4a6c-a5ee-131984bf507f.png width='45%',h`eight='50%'>`
+</figure> 
 
 $\epsilon$이 커질수록 epsilon-tube가 커지고 이에 따라 epsilon-tube의 오차 허용 범위가 넓어지는 것을 확인할 수 있다.
 
