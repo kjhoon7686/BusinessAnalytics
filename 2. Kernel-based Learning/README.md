@@ -642,7 +642,6 @@ d. **RBF Kernel SVR - Hyperparameter epsilon에 따른 결과**
 RBF Kernel SVR에서는 C가 고정되어 있을 때 epsilon이 커질수록 epsilon-tube가 커지지만 fitting된 회귀선 자체는 변하지 않는 것을 확인할 수 있다.
 
 e. **RBF Kernel SVR - Hyperparameter gamma에 따른 결과**
-![image](https://user-images.githubusercontent.com/79893946/199211356-51a89904-c64f-40cb-8ade-061d5950552e.png)
 
 
 <figure class='half'>
@@ -651,7 +650,7 @@ e. **RBF Kernel SVR - Hyperparameter gamma에 따른 결과**
 </figure> 
 
 <figure class='half'>
-    <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199211163-61855ebb-e1ee-42c2-bdfe-b2811d970759.png width='45%',h`eight='50%'>`
+    <p align='center'><img src=https://user-images.githubusercontent.com/79893946/199211873-46f2acb1-b553-4470-848a-dfc894467c28.png width='45%',h`eight='50%'>`
     <img src=https://user-images.githubusercontent.com/79893946/199211237-b153f092-7479-431f-9e2e-ba10fd8f7225.pn width='45%',h`eight='50%'>`
 </figure> 
 
@@ -670,3 +669,6 @@ reference
 [https://zernes.github.io/SVM/](https://zernes.github.io/SVM/)
 
 [https://www.kaggle.com/code/carlosdg/effect-of-hyperparameters-and-kernels-on-svms/notebook](https://www.kaggle.com/code/carlosdg/effect-of-hyperparameters-and-kernels-on-svms/notebook)
+https://changhyun-lee.github.io/example/Support-Vector-Machine
+https://github.com/KS-prashanth/Epslion-SVR/blob/main/Epsilon_svr/epsilonsvr.py
+
