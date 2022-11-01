@@ -334,7 +334,7 @@ iris data를 활용하여 실험을 진행하였다. iris data 중에서도 clas
 
 ![image](https://user-images.githubusercontent.com/79893946/199164641-7d2f83fc-5713-4ff0-bf60-7a67317d75b7.png)
 
-1. **In C-SVM, result by hyperparameter C**
+**a. **In C-SVM, result by hyperparameter C**
 
 ![image](https://user-images.githubusercontent.com/79893946/199164651-7628932f-54c7-47d7-846a-e7f03451c810.png)
 
