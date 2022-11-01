@@ -9,10 +9,10 @@
 		* Case 3 : Nonlinear and Soft Margin
 	- 실험
 		* SVM 구현 코드
-		1) C-SVM vs NU-SVM
+		1) C-SVM vs NU-SVM   
 			a. Linear Case
 			b. Nonlinear Case
-		2. SVM의 kernel function과 그 hyperparameter에 따른 결과 비교
+		2) SVM의 kernel function과 그 hyperparameter에 따른 결과 비교
 			a. In C-SVM, result by hyperparameter C
 			b. In RBF Kernel Function SVM, result by hyperparameter C, $\gamma$
 			c. In Polynomial Kernel Function, result by hyperparameter degree, r
