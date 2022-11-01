@@ -566,6 +566,9 @@ y=3+2log(x)+4sin(x) 라는 함수에 noise를 주어 500개의 샘플 데이터�
 ![image](https://user-images.githubusercontent.com/79893946/199183851-8f535363-f4b6-4c0b-b218-14f5ebf558c9.png)
 
 1. **Linear SVR - Hyperparameter C에 따른 결과**
+<center class="half">
+   <img src="https://user-images.githubusercontent.com/79893946/199184076-5172b50a-ff7d-4bb5-b15b-593d368e6afd.png" width="300"/>
+   <img src="https://user-images.githubusercontent.com/79893946/199184118-f782d75f-886e-4304-99cc-c5dbf649610f.png" width="300"/>
 
 ![image](https://user-images.githubusercontent.com/79893946/199184076-5172b50a-ff7d-4bb5-b15b-593d368e6afd.png)
 
