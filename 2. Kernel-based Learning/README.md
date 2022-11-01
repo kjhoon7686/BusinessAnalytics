@@ -280,7 +280,7 @@ dataset은 scikitlearn의 make_blobs 함수를 통해 선형으로 분리가능�
 
 ![image](https://user-images.githubusercontent.com/79893946/199164513-a4dd3ef0-ec94-4452-87cd-69d6036fdb4a.png)
 
-2) \nu-SVM
+2) $\nu$-SVM
 
 ![image](https://user-images.githubusercontent.com/79893946/199164531-a4dd6292-35b5-43c0-b578-68fe3f11e32e.png)
 
