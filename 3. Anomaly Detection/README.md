@@ -36,33 +36,33 @@ LOF에서는 k-distance와 reachability distance라는 개념이 중요하다.
 
 다음으로, reachability distance는 k-distance 범위 안에 있는 데이터까지의 거리는 distance(p, o)와 k-distance 중에 큰 값을 사용하는 개념이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/74233edf-0f17-4645-93f7-870b20c82cfb/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201839257-775b1c0e-c4ad-4fd3-aa76-d415012cedb9.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2aa11f42-3688-4cab-bb16-a9c0bdf83917/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201839300-9d3186a4-1389-44f7-82a6-42ccd711c7e5.png)
 
 이 개념들을 사용하면 LOF알고리즘은 다음과 같이 정의될 수 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/95050537-8faa-49bc-b08d-044610952b26/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201839325-dd23f8d3-2cb6-47dd-95bd-5ede9f5706b1.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/46107c59-3008-4390-817d-482f115e9794/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201839360-e18966bf-5954-41b7-9622-8119ec97a281.png)
 
 위의 그림을 보면 주변부 밀도와 데이터 간 거리에 따라 이상치 score가 어떻게 변화하는지 알 수 있다. 
 
 다음 그림은 LOF의 예시이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4bd0a652-0818-408d-b671-7b887be650af/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201839390-1250f0cf-2322-4978-94b1-e4306cab0197.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e7907148-d28f-40f1-b85f-27191017f62a/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201839429-6e58063f-6065-45ed-bb54-b720b656d1cf.png)
 
 ### 2. Auto-Encoder (AE)
 
 Auto-Encoder란 input과 output이 동일한 neural network이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/120f07a9-722f-44f4-b6c3-84e8e68827c0/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201839473-b425af76-af18-4bc3-ac8c-fe62307b794e.png)
 
 위의 그림을 보면 auto-encoder는 고양이 사진을 input으로 했을 때, encoder와 decoder를 지나 다시 원래의 고양이 사진을 복원하는 것을 목적으로 함을 알 수 있다. 이 때, latent space는 원본 데이터의 크기보다 작아야한다. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/dee9eeef-3a4e-4f37-a6bb-d2f706bb514a/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201839499-de7bd928-3ad1-46cc-b627-efbf86d6293e.png)
 
 위의 예시를 neural network의 형태로 나타낸 그림이다.
 
@@ -72,41 +72,35 @@ auto-encoder는 크게 두 가지 방식으로 활용될 수 있는데 첫째는
 
 앞서 설명한 일반적인 auto-encoder이외에도 이미지 데이터를 처리하는 모델인 cnn을 활용한 Convolutional Auto-Encoder(CAE)라는 모델도 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/93252e75-2590-4833-9bdf-3b793e821daf/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201839567-13cacae5-e37f-4c89-9147-bdbbc24cace1.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8aa6e2b0-a0ca-4652-b966-c1483a2292e6/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201839588-07dc4776-5815-47f7-92be-b7c523e1d7e5.png)
 
 CAE의 핵심은 일반적인 cnn과는 다르게 데이터가 축소되었다가 다시 input size와 동일한 output size로 확대되어야 한다는 점이다. 이를 위해 unpooling과 transpose convolution이라는 방법을 사용한다.
 
 unpooling은 max pooling의 위치를 기억하고 그 위치에 값을 복원하는 방법이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0ca406da-f859-445d-a2b3-06eab5520a24/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201839637-277b323b-3242-4781-9928-62cdb3ed0bea.png)
 
 transpose convolution은 convolution 연산을 통해 feature map의 크기를 키우는 방법이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8968b167-02bb-488d-bdfa-bb0b78271991/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201839684-bd3c4746-aa75-4929-b676-380ed5537eea.png)
 
 ### 3. Support Vector-based Anomaly Detection (OCSVM)
 
 SVM 방법론 중에서 가장 많이 사용되는 방법론 중 하나인 One-class Support Vector Machine은 다음 그림과 같이 정상 데이터를 최대한 떨어뜨리는 hyperplane을 찾는 SVM 방법론이다. 다음 그림에서 확인할 수 있듯이 hyperplane 아래이 있는 데이터는 outlier로, hyperplane 위에 있는 데이터는 정상 데이터로 분류된다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8363d18b-7233-40a5-9414-32540a9f44de/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201839731-f9e6b09a-2dae-4e5a-afbd-9113c9524bdd.png)
 
 One-class Support Vector Machine의 증명 과정을 간단하게 살펴보자.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6fd814f5-e9fc-4721-a2cb-cf7c8bdcbfd3/Untitled.png)
-
-![14_one_svm.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/556ec9c1-aba1-4873-b7ef-739f90646015/14_one_svm.png)
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4ff1576d-9b78-4864-a565-7c68f39ccb16/Untitled.png)
-
-![15_one_svm.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c0a1bedb-880a-429a-bd92-3830eebc7cb1/15_one_svm.png)
+![image](https://user-images.githubusercontent.com/79893946/201839875-594e7d0c-d114-4d89-bbda-15e7ad60e167.png)
 
 다음은 one-class svm의 목적식인데, 두 부분으로 이루어져 있다. 먼저 앞의 수식은 margin을 최대화하는 목적을 달성하기 위한 식이고, 두번째 식은 원점에서 최대한 멀어져야 하는 목적을 달성하기 위한 식이다. 또한 가운데 식은 클래스로 인정받지 못하는 샘플을 최소화하는 목적을 달성하기 위한 식이다. 마지막으로 라그랑지 제약조건을 보면 모든 데이터는 결정평면 위쪽에 위치해야 한다는 제약식을 확인할 수 있다. 
 
 위의 제약식에서 라그랑지와 듀얼 문제를 거치면 최종적으로 다음과 같은 최적화 문제로 수렴된다. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7e0b6efa-89b0-4bcb-8cc5-cc81b5d012ac/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201839928-b4a18693-54bb-4522-a356-32cef0d820e3.png)
 
 또한 일반적인 svm과 같이 kernel trick을 사용할 수 있다.
 
@@ -114,21 +108,21 @@ One-class Support Vector Machine의 증명 과정을 간단하게 살펴보자.
 
 isolation forest는 이상치 데이터는 개체수가 적고 정상 데이터와 특정 속성의 값이 다를 가능성이 높다는 점에서 시작된 모델이다. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/16420c6f-c3fb-4cd0-8530-d55a07fe2a16/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201839960-7b34cace-65a5-439e-a31c-2d78fc7c803a.png)
 
 다음과 같이 하나의 객체를 고립시키는 tree를 생성하는 상황을 가정해보자. 정상 데이터라면 고립시키는데에 split이 많이 필요하고, 이상치 데이터라면 상대적으로 적은 split으로 고립시킬 수 있는 것을 알 수 있다.
 
 isolation forest의 알고리즘은 다음과 같다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/94af353c-d575-4eda-b235-46c8b1b8d172/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201839984-91fbd030-4e68-4f55-b387-5bb52ad286d1.png)
 
 먼저, 전체 데이터에서 n개의 데이터 집합을 샘플링한다. 이 떼 tree하나당 256개 정도 샘플링하면 충분하다고 알려져 있다. 다음으로 이렇게 랜덤하게 선택된 관측치에 대해 임의의 변수와 분할점을 사용하여 이진 분할을 한다. 이 분할은 위 그림의 3가지 조건을 만족시켜야 한다. 그리고 1,2의 과정을 반복하여 여러 개의 tree를 생성하고 tree마다 각 관측치의 path length를 저장한다. 마지막으로 각 관측치의 평균 path length를 기반으로 이상치 스코어 계산 및 이상치를 판별한다. 
 
 이때, 이상치 스코어는 다음과 같이 정의될 수 있다. 
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/abaa5343-9fcf-435d-8981-6cc709ae1755/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201840027-cf7be067-45ae-4ec6-886b-ae5cd01c8ecf.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7e70bf4b-33ae-4bec-af6f-3f21effca4cd/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201840054-5716f538-3d99-44e7-a6b1-82422941df41.png)
 
 즉, tree에서 path length가 짧을수록 이상치 스코어는 1에 가까워지고, path length가 길수록 이상치 스코어는 0에 가까워지는 것을 확인할 수 있다.
 
@@ -483,7 +477,7 @@ class IsolationTreeEnsemble:
 
 **1) outlier 1%**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/62972412-750a-4f74-80b8-8b016806710f/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201840129-63e0518f-91b1-453c-8f29-afbc9d503487.png)
 
 total outlier = 10
 
@@ -498,7 +492,7 @@ outlier 1% 데이터에서는 LOF가 가장 성능이 좋고 나머지 세 모�
 
 **2) outlier 5%**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a6f2ec16-82f9-4e09-999b-d89eb973a310/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201840166-8f08c972-5bb2-4fbe-978b-f6307088b923.png)
 
 total outlier = 50
 
@@ -513,7 +507,7 @@ outlier 5% 데이터에서는 전반적으로 모든 모델의 성능이 향상�
 
 **3) outlier 10%**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/731de2ed-861d-43d8-9c17-2f7e5be00cd8/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201840202-e5ff63c2-052a-432c-bf13-8975262abbb3.png)
 
 total outlier = 100
 
@@ -528,7 +522,7 @@ outlier 10% 데이터에서는 IF, AE, OCSVM의 성능은 대폭 상승했지만
 
 **4) outlier 30%**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/9ac594ed-7e32-491c-ac62-4404862df9d2/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/201840241-9eee8595-f998-4878-8fcc-55df91a41edc.png)
 
 total outlier = 300
 
