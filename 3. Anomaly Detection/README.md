@@ -50,9 +50,8 @@ LOF에서는 k-distance와 reachability distance라는 개념이 중요하다.
 
 다음 그림은 LOF의 예시이다.
 
-![image](https://user-images.githubusercontent.com/79893946/201839390-1250f0cf-2322-4978-94b1-e4306cab0197.png)
+![image](https://user-images.githubusercontent.com/79893946/201840606-51044ba8-febf-499c-9400-a934a758bb06.png)
 
-![image](https://user-images.githubusercontent.com/79893946/201839429-6e58063f-6065-45ed-bb54-b720b656d1cf.png)
 
 ### 2. Auto-Encoder (AE)
 
@@ -72,9 +71,7 @@ auto-encoder는 크게 두 가지 방식으로 활용될 수 있는데 첫째는
 
 앞서 설명한 일반적인 auto-encoder이외에도 이미지 데이터를 처리하는 모델인 cnn을 활용한 Convolutional Auto-Encoder(CAE)라는 모델도 있다.
 
-![image](https://user-images.githubusercontent.com/79893946/201839567-13cacae5-e37f-4c89-9147-bdbbc24cace1.png)
-
-![image](https://user-images.githubusercontent.com/79893946/201839588-07dc4776-5815-47f7-92be-b7c523e1d7e5.png)
+![image](https://user-images.githubusercontent.com/79893946/201840747-f4129ccc-3b00-4009-b525-62c5dbc918d8.png)
 
 CAE의 핵심은 일반적인 cnn과는 다르게 데이터가 축소되었다가 다시 input size와 동일한 output size로 확대되어야 한다는 점이다. 이를 위해 unpooling과 transpose convolution이라는 방법을 사용한다.
 
@@ -580,7 +577,7 @@ cardio와 satellite 데이터의 결과를 보면 실험 1과 같은 결과를 �
 
 실험 1, 2의 결과가 hyperparameter setting 때문이었을 수 있기 때문에 hyperparameter에 따른 성능 변화와 tuning 후 데이터셋별 모델 성능을 다시 비교해보기 위해 데이터셋/모델별 hyperparameter에 따른 성능을 비교해보았다. 평가지표는 마찬가지로 AUROC를 사용했다. 각 모델별로 중요하다고 생각하는 hyperparameter를 두 개씩 정해서 실험을 진행하였다.
 
-1) LOF
+**1) LOF**
 
 **Default setting** 
 
@@ -614,7 +611,7 @@ n_neighbors는 k-distance의 k를 의미하고 leaf_size는 tree의 leaf_size이
 
 outlier 비율이 작은 데이터셋의 경우에는 n_neighbors가 10일 때 성능이 가장 좋았고, outlier 비율이 높은 경우에는 n_neighbors가 30인 경우의 성능이 좋았다. 또한 leaf_size는 모델 성능에 큰 영향을 주지 못하는 것을 알 수 있었다. default setting과 비교했을 때, letter를 제외하면 큰 차이는 없었다.
 
-2) IF
+**2) IF**
 
 **Default setting** 
 
@@ -648,7 +645,7 @@ n_estimatiors는 base estimators의 수를 의미하고, max_samples은 sample�
 
 satimage-2 데이터의 경우에는 hyperparameter와 관계없이 성능이 최대를 기록했다. 나머지 세 데이터셋에 대해서는 모두 n_estimators가 50일 때 가장 좋은 성능을 보였다. 또한 max_samples의 경우에는 뚜렷한 특징을 보이지는 않았는데 sample의 수에 따라 성능이 드라마틱하게 변화하지는 않았다. 하지만 sample의 수에 따라 학습 소요 시간이 다르기 때문에 작은 sample을 사용하는 것이 좋고, 이러한 기준과 실험에 따라서 논문에서 256개로 설정한 것으로 생각된다. 데이터의 크기를 더욱 늘리면 어떤 결과를 보일지 실험해보는 것도 좋은 실험이 될 것 같다. 마찬가지로 default setting과 비교했을 때 letter를 제외하면 큰 차이는 없었다.
 
-3) AE
+**3) AE**
 
 **Default setting** 
 
@@ -679,7 +676,7 @@ hidden_neurons는 encoder와 decoder의 층별 크기를 의미하고, hidden_ac
 
 모든 데이터셋에 대해 hyperparameter별로 성능이 거의 변화하지 않았다. layer의 수나 다른 parameter들이 더 중요한 역할을 할 것으로 예상된다. 마찬가지로 default setting과 비교했을 때 letter를 제외하면 큰 차이는 없었다.
 
-4) OCSVM
+**4) OCSVM**
 
 **Default setting** 
 
@@ -745,7 +742,9 @@ letter 데이터를 제외하고는 hyperparameter tuning후에도 성능이 크
 > satimage-2 데이터부터 살펴보면 실험 1의 결과와는 다르게 LOF를 제외한 모델의 성능이 아주 높게 나왔으며, LOF의 성능은 낮게 나왔다. 하지만 letter 데이터를 살펴보면 LOF의 성능이 나머지 세 모델의 성능보다 높게 나온 것이 실험1의 결과와 일치했다. 여기서 실험 1과의 가장 큰 차이점이라면 데이터의 수인데 satimage-2의 데이터 수는 5803개로 letter보다 훨씬 작기 크기 때문에 model-based 모델들의 성능이 높은 것으로 예상되고 task가 아주 쉬웠을 것으로 예상된다. 따라서 outlier 비율 못지 않게 **데이터의 수**가 모델 성능에 큰 영향을 주는 것을 알 수 있다. cardio와 satellite 데이터의 결과를 보면 실험 1과 같은 결과를 보이는 것을 알 수 있다. outlier 비율이 10% 정도일 때 model-based 모델들의 성능이 매우 높고 LOF의 성능이 낮았다. 또한 outlier 비율이 30% 이상인 satellite의 결과를 보면 데이터의 수가 많음에도 불구하고 성능이 다 떨어진 것을 확인할 수 있었다. 결론적으로 outlier 비율이 약 5% 이하일 때는 데이터의 수가 모델 성능에 더 큰 영향을 주고, outlier 비율이 약 10% 일때는 model-based 모델들의 성능이 LOF보다 높은 것을 확인할 수 있었다. 또한 outlier 비율이 30% 이상인 outlier가 많은 데이터의 경우에는 데이터 수와 관계 없이 모델 성능이 모두 악화되었지만 상대적으로 model-based 모델들의 성능이 더 높은 것을 알 수 있었다.
 > 
 
-더 많은 모델과 데이터셋 그리고 데이터의 수에 따라서도 실험을 진행하면 더 흥비로운 실험 결과를 얻을 수 있을 것 같다. 
+더 많은 모델과 데이터셋 그리고 데이터의 수에 따라서도 실험을 진행하면 더 흥로운 실험 결과를 얻을 수 있을 것 같다. 
+
+
 
 reference
 
