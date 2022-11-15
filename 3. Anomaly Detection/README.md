@@ -599,15 +599,15 @@ n_neighbors는 k-distance의 k를 의미하고 leaf_size는 tree의 leaf_size이
 | # Dimensions | 36 | 32 | 21 | 36 |
 | Outlier Perc | 1.22 | 6.25 | 9.61 | 31.64 |
 | Default | 0.5699 | 0.8631 | 0.5898 | 0.5605 |
-| n_neighbors=10/leaf_size=20 | 0.57 | 0.9 | 0.48 | 0.54 |
-| n_neighbors=10/leaf_size=30 | 0.57 | 0.9 | 0.48 | 0.54 |
-| n_neighbors=10/leaf_size=40 | 0.57 | 0.9 | 0.48 | 0.54 |
+| n_neighbors=10/leaf_size=20 | **0.57** | **0.9** | 0.48 | 0.54 |
+| n_neighbors=10/leaf_size=30 | **0.57** | **0.9** | 0.48 | 0.54 |
+| n_neighbors=10/leaf_size=40 | **0.57** | **0.9** | 0.48 | 0.54 |
 | n_neighbors=20/leaf_size=20 | 0.53 | 0.89 | 0.52 | 0.56 |
 | n_neighbors=20/leaf_size=30 | 0.53 | 0.89 | 0.52 | 0.56 |
 | n_neighbors=20/leaf_size=40 | 0.53 | 0.89 | 0.52 | 0.56 |
-| n_neighbors=30/leaf_size=20 | 0.44 | 0.86 | 0.59 | 0.57 |
-| n_neighbors=30/leaf_size=30 | 0.44 | 0.86 | 0.59 | 0.57 |
-| n_neighbors=30/leaf_size=40 | 0.44 | 0.86 | 0.59 | 0.57 |
+| n_neighbors=30/leaf_size=20 | 0.44 | 0.86 | **0.59** | **0.57** |
+| n_neighbors=30/leaf_size=30 | 0.44 | 0.86 | **0.59** | **0.57** |
+| n_neighbors=30/leaf_size=40 | 0.44 | 0.86 | **0.59** | **0.57** |
 
 outlier 비율이 작은 데이터셋의 경우에는 n_neighbors가 10일 때 성능이 가장 좋았고, outlier 비율이 높은 경우에는 n_neighbors가 30인 경우의 성능이 좋았다. 또한 leaf_size는 모델 성능에 큰 영향을 주지 못하는 것을 알 수 있었다. default setting과 비교했을 때, letter를 제외하면 큰 차이는 없었다.
 
@@ -634,8 +634,8 @@ n_estimatiors는 base estimators의 수를 의미하고, max_samples은 sample�
 | Outlier Perc | 1.22 | 6.25 | 9.61 | 31.64 |
 | Default | 0.9969 | 0.5551 | 0.93 | 0.701 |
 | n_estimators=50/max_samples=128 | 1.0 | 0.43 | 0.89 | 0.66 |
-| n_estimators=50/max_samples=256 | 1.0 | 0.56 | 0.93 | 0.73 |
-| n_estimators=50/max_samples=512 | 1.0 | 0.59 | 0.88 | 0.69 |
+| n_estimators=50/max_samples=256 | 1.0 | 0.56 | **0.93** | **0.73** |
+| n_estimators=50/max_samples=512 | 1.0 | **0.59** | 0.88 | 0.69 |
 | n_estimators=100/max_samples=128 | 1.0 | 0.53 | 0.93 | 0.67 |
 | n_estimators=100/max_samples=256 | 1.0 | 0.57 | 0.91 | 0.67 |
 | n_estimators=100/max_samples=512 | 1.0 | 0.57 | 0.91 | 0.66 |
@@ -670,7 +670,7 @@ hidden_neurons는 encoder와 decoder의 층별 크기를 의미하고, hidden_ac
 | hidden_neurons=[64, 16, 16, 64]/hidden_activation=relu | 0.99 | 0.66 | 0.94 | 0.62 |
 | hidden_neurons=[64, 16, 16, 64]/hidden_activation=tanh | 0.99 | 0.66 | 0.94 | 0.62 |
 | hidden_neurons=[64, 8, 8, 64]/hidden_activation=relu | 0.99 | 0.66 | 0.94 | 0.62 |
-| hidden_neurons=[64, 8, 8, 64]/hidden_activation=tanh | 0.99 | 0.66 | 0.94 | 0.63 |
+| hidden_neurons=[64, 8, 8, 64]/hidden_activation=tanh | 0.99 | 0.66 | 0.94 | **0.63** |
 | hidden_neurons=[64, 4, 4, 64]/hidden_activation=relu | 0.99 | 0.66 | 0.94 | 0.62 |
 | hidden_neurons=[64, 4, 4, 64]/hidden_activation=tanh | 0.99 | 0.66 | 0.94 | 0.62 |
 
@@ -699,14 +699,14 @@ kernel은 svm의 kernel function을 의미하고, nu는 svm의 hyperparameter이
 | Outlier Perc | 1.22 | 6.25 | 9.61 | 31.64 |
 | Default | 0.9997 | 0.5918 | 0.9271 | 0.6629 |
 | kernel=poly/nu=0.25 | 0.02 | 0.79 | 0.18 | 0.48 |
-| kernel=poly/nu=0.5 | 0.08 | 0.83 | 0.15 | 0.52 |
+| kernel=poly/nu=0.5 | 0.08 | **0.83** | 0.15 | 0.52 |
 | kernel=poly/nu=0.75 | 0.03 | 0.82 | 0.13 | 0.54 |
-| kernel=rbf/nu=0.25 | 0.99 | 0.68 | 0.88 | 0.62 |
-| kernel=rbf/nu=0.5 | 0.99 | 0.69 | 0.91 | 0.68 |
-| kernel=rbf/nu=0.75 | 0.99 | 0.68 | 0.92 | 0.66 |
+| kernel=rbf/nu=0.25 | **0.99** | 0.68 | 0.88 | 0.62 |
+| kernel=rbf/nu=0.5 | **0.99** | 0.69 | 0.91 | **0.68** |
+| kernel=rbf/nu=0.75 | **0.99** | 0.68 | 0.92 | 0.66 |
 | kernel=sigmoid/nu=0.25 | 0.92 | 0.41 | 0.85 | 0.47 |
 | kernel=sigmoid/nu=0.5 | 0.94 | 0.32 | 0.9 | 0.47 |
-| kernel=sigmoid/nu=0.75 | 0.96 | 0.24 | 0.93 | 0.51 |
+| kernel=sigmoid/nu=0.75 | 0.96 | 0.24 | **0.93** | 0.51 |
 
 kernel에 따라서 성능 변화가 아주 컸고, nu에 따라서도 변화를 보였다. 또한 전반적으로 rbf kernel의 성능이 nu에 관계없이 가장 안정적이고 좋았다. 마찬가지로 default setting과 비교했을 때 letter를 제외하면 큰 차이는 없었다.
 
