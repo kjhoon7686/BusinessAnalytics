@@ -27,36 +27,36 @@ Random Forest는 의사결정나무 기반 앙상블의 특수한 형태로서 �
 - Bagging
 - Randomly chosen predictor variable
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bd30cdf1-7ba7-48fc-8f16-5c1829c80d5c/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/204269390-702fa0d4-c752-4d02-bdc9-3fad847652e0.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/df7d3290-817d-4e71-a681-2642ccd0299c/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/204269429-71e90e40-217f-4a8a-aa56-59c3b58125b4.png)
 
 ### 2. Gradient Boosting Machine (GBM)
 
 Gradient Boosting Machine은 gradient descent 방법을 boosting에 적용한 모델이다. 개별 모델을 sequential한 방식으로 학습시키고, 각 단계의 Base learner들이 이전 단계의 Base learner의 약점을 보완한다는 특징을 가지고 있다. 이전 단계의 Base learner의 약점은 손실 함수의 gradient에 반영된다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2bb6b0cd-c860-46a5-817e-e27e1ea7223d/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/204269480-ceea89f6-331e-46fd-9e7f-c3336dbf8f17.png)
 
 Gradient Boosting Machine의 알고리즘은 다음과 같다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6c20060d-dcab-4277-b4ee-7dca451835e4/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/204269531-d314a1e0-4b43-49f3-8c90-a64105858918.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/25082068-b1c1-4401-b9b4-8d803892cc07/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/204269574-105c149d-2bc4-4d64-8a19-9e1f45f3bc1f.png)
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2b1f4baf-2beb-4022-8c66-0251a398cefc/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/204269608-1b2123de-b76d-458d-9358-2341468f8af4.png)
 
 ### 3. Extreme Gradient Boosting Machine (XGBM)
 
 XGBoost는 GBM에 overfitting regularization효과를 중심으로 해서 여러 장점을 추가한 모델이다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4e8453da-4824-4a94-ad07-86c4800f502b/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/204269656-85a1fd38-3d6d-4ad5-9c98-53d0fe24e473.png)
 
 다음의 두 가지 split finding algorithm을 통해 모델이 구성된다.
 
 - Approximation algorithm : 이 알고리즘은 미리 정해놓은 분할 수로 data를 분할한 후 split이 이루어지기 때문에 기존 모델에 대해 속도가 빨라진다는 장점이 있다.
 - Sparsity-Aware algorithm : 이 알고리즘은 데이터가 sparse한 경우에 어떤 방법으로 처리할지를 미리 설정해놓는 방식으로 이루어진다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/087234c0-0702-4cce-81c1-9f1e1553de9e/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/204269696-19a95202-dcef-4e08-be82-c132e58ee2e4.png)
 
 ### 4. Light Gradient Boosting Machine (LGBM)
 
@@ -64,11 +64,11 @@ LGBM은 GBM이 모든 feature에 대해 모든 data instance를 scan해야 한�
 
 이를 위해 다음의 두 가지 방법을 사용한다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/169856cb-3c42-4ee0-90df-ff0711441d99/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/204269738-8a75ce74-cf8f-4b46-a090-3476c510fb63.png)
 
 또한 아래 그림과 같이 일반적인 Boosting알고리즘과 달리 Leaf-wise tree의 형태를 보이는데 이로 인해 속도가 매우 빨라진다고 알려져 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8bd6956d-60f3-4e5d-abeb-7f1fe8cccb89/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/204269768-d7e38530-9534-49f8-b9b4-8fb580cb2bfd.png)
 
 ## 실험
 
