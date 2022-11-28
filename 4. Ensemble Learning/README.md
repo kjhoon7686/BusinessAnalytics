@@ -391,6 +391,18 @@ hyperparameter tuning 전의 성능과 tuning 후의 성능은 거의 모든 경
 
 ### 5. 결론
 
+- 실험 1 : **데이터 수에 따른 데이터셋별 모델 성능 비교**
+    - 데이터셋별 성능비교 : 데이터 수가 적은 경우에는 RF와 GBM이 성능이 높고, 데이터 수가 많은 경우에는 XGBM과 LGBM의 성능이 높은 경향성이 있음
+    - 모델 훈련 시간 비교 : LGBM의 훈련 시간이 다른 모델들에 비해 훨씬 빠름
+- 실험 2 : **데이터셋별 하이퍼파라미터에 따른 모델 성능 비교**
+    - n_estimators : 최적의 값이 존재하는 것으로 판단됨. 값에 따라 성능 차이가 유의미하게 남
+    - max_depth : 값의 높고 낮음에 따른 성능 변화가 일치하지 않음. n_estimators보다 성능에 더 큰 영향을 미침
+- 실험 3 : **데이터셋별 feature importance 비교**
+    - 모델에 따라 feature importance가 높은 상위 feature들은 비슷한 경향성이 있고 feature importance가 낮은 feature들은 모델마다 상이한 결과를 보임
+- 실험 4 : **데이터셋별 hyperparameter tuning 전후 결과 비교**
+    - hyperparameter tuning 후의 결과가 tuning 전의 결과보다 유의미하게 높음. n_estimators와 max_depth는 bagging과 boosting 모델 모두에게 중요한 hyperparameter라고 판단됨.
+
+
 reference
 
 [https://www.kaggle.com/getting-started/176257](https://www.kaggle.com/getting-started/176257)
