@@ -172,25 +172,25 @@ hyperparameter로는 n_estimators와 max_depth를 선정했다. n_estimators는 
 - titanic
     
     
-    | RF | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **RF** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.7978 | 0.6196 | 0.6983 | 0.7464 | 0.7785 |
     | n_estimators : 100 | 0.8043 | 0.6132 | 0.6982 | 0.7432 | 0.7705 |
     | n_estimators : 200 | 0.8026 | 0.6131 | 0.6950 | 0.7544 | 0.7737 |
     
-    | GBM | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **GBM** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.8009 | 0.7962 | 0.8315 | 0.8315 | 0.8251 |
     | n_estimators : 100 | 0.8042 | 0.7978 | 0.8347 | 0.8363 | 0.8283 |
     | n_estimators : 200 | 0.8009 | 0.8059 | 0.8347 | 0.8396 | 0.8331 |
     
-    | XGBM | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **XGBM** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.7801 | 0.8155 | 0.8026 | 0.7833 | 0.7801 |
     | n_estimators : 100 | 0.7721 | 0.8074 | 0.7865 | 0.7672 | 0.7753 |
     | n_estimators : 200 | 0.7640 | 0.7994 | 0.7672 | 0.7592 | 0.7656 |
     
-    | LGBM | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **LGBM** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.8106 | 0.8171 | 0.8122 | 0.8058 | 0.8106 |
     | n_estimators : 100 | 0.7881 | 0.8218 | 0.8058 | 0.7993 | 0.7897 |
@@ -199,25 +199,25 @@ hyperparameter로는 n_estimators와 max_depth를 선정했다. n_estimators는 
 - nba
     
     
-    | RF | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **RF** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.6969 | 0.6307 | 0.7012 | 0.7022 | 0.6958 |
     | n_estimators : 100 | 0.7065 | 0.6307 | 0.6884 | 0.7054 | 0.6958 |
     | n_estimators : 200 | 0.6937 | 0.6307 | 0.6841 | 0.7065 | 0.6991 |
     
-    | GBM | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **GBM** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.6489 | 0.6969 | 0.6948 | 0.6841 | 0.6660 |
     | n_estimators : 100 | 0.6500 | 0.6991 | 0.6937 | 0.6820 | 0.6670 |
     | n_estimators : 200 | 0.6564 | 0.6937 | 0.6873 | 0.6884 | 0.6724 |
     
-    | XGBM | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **XGBM** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.6841 | 0.6649 | 0.6510 | 0.6702 | 0.6862 |
     | n_estimators : 100 | 0.6734 | 0.6670 | 0.6478 | 0.6819 | 0.6873 |
     | n_estimators : 200 | 0.6755 | 0.6521 | 0.6617 | 0.6809 | 0.6883 |
     
-    | LGBM | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **LGBM** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.6852 | 0.7002 | 0.6842 | 0.6831 | 0.6809 |
     | n_estimators : 100 | 0.6862 | 0.6830 | 0.6703 | 0.6724 | 0.6820 |
@@ -226,25 +226,25 @@ hyperparameter로는 n_estimators와 max_depth를 선정했다. n_estimators는 
 - wine
     
     
-    | RF | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **RF** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.9949 | 0.9743 | 0.9903 | 0.9947 | 0.9949 |
     | n_estimators : 100 | 0.9952 | 0.9719 | 0.9897 | 0.9947 | 0.9952 |
     | n_estimators : 200 | 0.9952 | 0.9710 | 0.9905 | 0.9947 | 0.9952 |
     
-    | GBM | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **GBM** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.9848 | 0.9877 | 0.9919 | 0.9872 | 0.9855 |
     | n_estimators : 100 | 0.9853 | 0.9923 | 0.9932 | 0.9890 | 0.9855 |
     | n_estimators : 200 | 0.9861 | 0.9943 | 0.9945 | 0.9892 | 0.9855 |
     
-    | XGBM | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **XGBM** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.9956 | 0.9945 | 0.9956 | 0.9954 | 0.9956 |
     | n_estimators : 100 | 0.9960 | 0.9965 | 0.9960 | 0.9956 | 0.9958 |
     | n_estimators : 200 | 0.9965 | 0.9958 | 0.9960 | 0.9956 | 0.9960 |
     
-    | LGBM | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **LGBM** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.9943 | 0.9908 | 0.9936 | 0.9941 | 0.9943 |
     | n_estimators : 100 | 0.9956 | 0.9936 | 0.9947 | 0.9949 | 0.9956 |
@@ -253,25 +253,25 @@ hyperparameter로는 n_estimators와 max_depth를 선정했다. n_estimators는 
 - electrical_grid
     
     
-    | RF | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **RF** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.9118 | 0.7080 | 0.8203 | 0.8961 | 0.9101 |
     | n_estimators : 100 | 0.9171 | 0.7084 | 0.8205 | 0.8956 | 0.9150 |
     | n_estimators : 200 | 0.9180 | 0.7088 | 0.8165 | 0.8998 | 0.9156 |
     
-    | GBM | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **GBM** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.8415 | 0.8713 | 0.9084 | 0.9150 | 0.8405 |
     | n_estimators : 100 | 0.8407 | 0.9011 | 0.9244 | 0.9201 | 0.8388 |
     | n_estimators : 200 | 0.8395 | 0.9190 | 0.9357 | 0.9247 | 0.8395 |
     
-    | XGBM | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **XGBM** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.9348 | 0.9120 | 0.9313 | 0.9331 | 0.9337 |
     | n_estimators : 100 | 0.9407 | 0.9254 | 0.9381 | 0.9364 | 0.9383 |
     | n_estimators : 200 | 0.9450 | 0.9314 | 0.9431 | 0.9408 | 0.9410 |
     
-    | LGBM | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **LGBM** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.9223 | 0.8721 | 0.9097 | 0.9247 | 0.9223 |
     | n_estimators : 100 | 0.9381 | 0.9038 | 0.9274 | 0.9386 | 0.9381 |
@@ -280,25 +280,25 @@ hyperparameter로는 n_estimators와 max_depth를 선정했다. n_estimators는 
 - employee
     
     
-    | RF | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **RF** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.9877 | 0.7938 | 0.9396 | 0.9684 | 0.9850 |
     | n_estimators : 100 | 0.9878 | 0.8693 | 0.9160 | 0.9711 | 0.9855 |
     | n_estimators : 200 | 0.9880 | 0.8684 | 0.9159 | 0.9720 | 0.9863 |
     
-    | GBM | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **GBM** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.9766 | 0.9535 | 0.9777 | 0.9828 | 0.9772 |
     | n_estimators : 100 | 0.9759 | 0.9663 | 0.9796 | 0.9854 | 0.9771 |
     | n_estimators : 200 | 0.9756 | 0.9747 | 0.9818 | 0.9862 | 0.9761 |
     
-    | XGBM | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **XGBM** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.9348 | 0.9120 | 0.9313 | 0.9331 | 0.9337 |
     | n_estimators : 100 | 0.9407 | 0.9254 | 0.9381 | 0.9364 | 0.9383 |
     | n_estimators : 200 | 0.9450 | 0.9314 | 0.9431 | 0.9408 | 0.9410 |
     
-    | LGBM | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
+    | **LGBM** | max_depth : None | max_depth : 2 | max_depth : 4 | max_depth : 8 | max_depth : 16 |
     | --- | --- | --- | --- | --- | --- |
     | n_estimators : 50 | 0.9806 | 0.9533 | 0.9768 | 0.9806 | 0.9807 |
     | n_estimators : 100 | 0.9853 | 0.9642 | 0.9784 | 0.9830 | 0.9857 |
@@ -315,93 +315,27 @@ hyperparameter로는 n_estimators와 max_depth를 선정했다. n_estimators는 
 
 - titanic
 
-![RF](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b9da02cb-6b6a-4ed3-a60b-5feb56b2cd7d/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/204270876-48844019-b17d-481a-abac-ed0a01d8cd30.png)
 
-RF
-
-![GBM](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a0648eb9-f441-4b57-8e7c-daedafb38f04/Untitled.png)
-
-GBM
-
-![XGBM](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/62326402-6385-429c-ba55-fbb0809bd68c/Untitled.png)
-
-XGBM
-
-![LGBM](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/d17e9aa4-b161-418f-93ab-52960b8f3c2d/Untitled.png)
-
-LGBM
 
 - nba
 
-![RF](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/042a4b17-ac99-41de-8924-2a4965eff60a/Untitled.png)
-
-RF
-
-![GBM](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/344cc895-16e8-4faa-8340-811b5d29a8dc/Untitled.png)
-
-GBM
-
-![XGBM](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fb1dcddb-adc6-498a-bd7f-e69769b6b83c/Untitled.png)
-
-XGBM
-
-![LGBM](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b4f8b5b1-6738-4f6e-8961-8438772a1588/Untitled.png)
-
-LGBM
+![image](https://user-images.githubusercontent.com/79893946/204271139-1ba2213f-c986-427a-bcff-d830ed66d232.png)
 
 - wine
 
-![RF](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/21b5435c-bbaa-4525-9fc2-a8dc27ddd90e/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/204271289-5725abe6-6015-44e7-be9b-49895b7cceab.png)
 
-RF
-
-![GBM](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a8488737-4958-4dde-860f-b782db0e5c36/Untitled.png)
-
-GBM
-
-![XGBM](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5d56f8fb-86be-4e69-b026-274ce60afede/Untitled.png)
-
-XGBM
-
-![LGBM](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/383e8651-1910-4731-9e8a-1e7bf402f9cc/Untitled.png)
-
-LGBM
 
 - electrical_grid
 
-![RF](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a69f27df-09af-4339-909c-e3248cb30df0/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/204271483-16cc6542-a752-4f54-bbfe-64fe71d1965a.png)
 
-RF
-
-![GBM](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e399f71e-9899-475a-9cc0-a180c21294d2/Untitled.png)
-
-GBM
-
-![XGBM](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c44781b3-c288-414e-b11c-598c782967c2/Untitled.png)
-
-XGBM
-
-![LGBM](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3363c6bc-4d00-4481-8356-370f3c1fd6c9/Untitled.png)
-
-LGBM
 
 - employee
 
-![RF](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6ed7a63e-951e-40f6-bed8-be428f7a3bf8/Untitled.png)
+![image](https://user-images.githubusercontent.com/79893946/204271588-03cd7d00-5388-4604-b8b6-0f6a794a1159.png)
 
-RF
-
-![GBM](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5d309289-5c02-46df-b70e-29481eefee61/Untitled.png)
-
-GBM
-
-![XGBM](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/345bddd9-3969-4aa1-899b-c4dc1a014a70/Untitled.png)
-
-XGBM
-
-![LGBM](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/605b4ea1-639d-4c60-8c7a-166186c13558/Untitled.png)
-
-LGBM
 
 데이터 수에 관계없이 모델에 따라 Feature importance 값 상위 feature들은 순위가 조금은 다를지라도 어느정도 비슷한 결과를 보이는 것을 알 수 있었다. 대부분의 plot에서 feature importance가 급감하기 시작하는 feature들이 있는데 이는 tree 기반 모델이기 때문에 information gain이 뚝 떨어지는 split이 있기 때문인 것으로 생각되고 급감한 feature부터는 모델별로 일관성이 없었다. 즉 높은 information gain을 갖는 feature들은 어느 정도 일관성을 갖고 있는 것 같고, 이 feature들을 중심으로 feature engineering을 하면 모델 성능을 높이는 데에 도움이 될 것 같다는 생각이 들었다.
 
