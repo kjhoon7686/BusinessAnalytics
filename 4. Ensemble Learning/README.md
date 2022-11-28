@@ -346,15 +346,15 @@ hyperparameter로는 n_estimators와 max_depth를 선정했다. n_estimators는 
 | Model | default | tuning |
 | --- | --- | --- |
 | RF | 0.7994 | 0.8043 |
-| GBM | 0.8154 | 0.8396 |
+| GBM | **0.8154** | **0.8396** |
 | XGBM | 0.7752 | 0.8155 |
 | LGBM | 0.7881 | 0.8218 |
 - nba
 
 | Model | default | tuning |
 | --- | --- | --- |
-| RF | 0.6927 | 0.7065 |
-| GBM | 0.6970 | 0.6991 |
+| RF | 0.6927 | **0.7065** |
+| GBM | **0.6970** | 0.6991 |
 | XGBM | 0.6552 | 0.6883 |
 | LGBM | 0.6884 | 0.7002 |
 - wine
@@ -363,21 +363,21 @@ hyperparameter로는 n_estimators와 max_depth를 선정했다. n_estimators는 
 | --- | --- | --- |
 | RF | 0.9943 | 0.9952 |
 | GBM | 0.9936 | 0.9945 |
-| XGBM | 0.9954 | 0.9965 |
-| LGBM | 0.9956 | 0.9963 |
+| XGBM | 0.9954 | **0.9965** |
+| LGBM | **0.9956** | 0.9963 |
 - electrical_grid
 
 | Model | default | tuning |
 | --- | --- | --- |
 | RF | 0.9171 | 0.9180 |
 | GBM | 0.9193 | 0.9357 |
-| XGBM | 0.9424 | 0.9450 |
-| LGBM | 0.9427 | 0.9436 |
+| XGBM | 0.9424 | **0.9450** |
+| LGBM | **0.9427** | 0.9436 |
 - employee
 
 | Model | default | tuning |
 | --- | --- | --- |
-| RF | 0.9888 | 0.9880 |
+| RF | **0.9888** | **0.9880** |
 | GBM | 0.9765 | 0.9862 |
 | XGBM | 0.9869 | 0.9872 |
 | LGBM | 0.9859 | 0.9877 |
