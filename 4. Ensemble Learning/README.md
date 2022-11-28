@@ -325,7 +325,7 @@ hyperparamter tuning은 시간이 오래 걸리기 때문에 1번 실험과 달�
 
 - nba
 
-![image](https://user-images.githubusercontent.com/79893946/204271139-1ba2213f-c986-427a-bcff-d830ed66d232.png)
+![image](https://user-images.githubusercontent.com/79893946/204274783-eafb14dc-be37-4ef8-89c3-439a013acca1.png)
 
 - wine
 
